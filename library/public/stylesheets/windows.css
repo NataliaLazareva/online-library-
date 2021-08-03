@@ -1,0 +1,36 @@
+.mainmenubtn {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top: 20px;
+}
+
+.mainmenubtn:hover {
+    background-color: darkgray;
+}
+
+.child {
+    position: relative;
+    display: inline-block;
+}
+.btn {
+    display: none;
+    background-color: black;
+    min-width: 200px;
+}
+.btn a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.child:hover .btn {
+    display: block;
+}
+
+.parent {
+    top: 50%;
+    left: 50%;
+}

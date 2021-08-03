@@ -1,0 +1,165 @@
+/* Основная часть */
+body{
+    width: 100%;
+    height:100%;
+
+    color: #333333;
+    background: darkgray;
+    font-size: 1em;
+    font-family: "Times New Roman", sans-serif;
+    line-height: 140%;
+}
+/*ссылки*/
+a{
+    color: black ;
+    text-decoration: none;
+    transition: all.4s ease;
+    -moz-transition: all.4s ease;/*для Mozilla*/
+    text-decoration: none;
+}
+/*при наведении на ссылку*/
+a:hover{
+    color: crimson;
+    text-decoration: none;
+    transition: all.4s ease;
+    -moz-transition: all.4s ease;/*для Mozilla*/
+}
+
+/*при нажатии на ссылку*/
+a:active{color: aqua}
+
+/*другой длок*/
+header, footer
+{
+    width: 98%;
+    background-color: aliceblue;
+    float: left; /*выравнивание текста по левому краю*/
+}
+header{
+    border-bottom: 1.8px solid silver ;
+    padding: 1%;
+}
+image{
+    width: 65%;
+    height: auto;
+}
+
+input[type=text].field{
+    border-radius: 10px;
+    border: 2px solid silver;
+    padding: 8px;
+    margin-left: 30px;
+}
+input[type=text].field:focus{border: 2px crimson}
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Меню, ссылки*/
+
+#logo{
+    color: #333333;
+    font-size: 3em;
+}
+#schedule {
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+#clientName, #clientPhone, #clientСardNumber{
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+#log_in{
+    font-size: 1.5em;
+    margin-left: 45px;
+}
+#sign_up{
+    font-size: 1.5em;
+    margin-left: 50px;
+}
+.parent > nav{
+    background: darkgray;
+    float: left;
+    width: 23.5%;
+    margin-right: 0.3%;
+    padding: 10px;
+    /*border: 1px solid #ccc;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#news article{
+    float: left;
+    border: 1px solid silver;
+    width: 65%;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+/*Slideshow*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1500px;
+    max-height: 700%;
+    position: relative;
+    margin: 2px;
+}
+
+/* Сокрытие изображений */
+.mySlides {
+    display: none;
+}
+
+/* Номера картинок */
+
+.numberimage {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: inherit;
+    top: 0;
+}
+
+.dots {
+    margin-left: 28%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
