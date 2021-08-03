@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/booktable.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Книги</title>
+</head>
+<body>
+<form>
+    <table id="table">
+        <tr>
+            <td>Автор</td><td>Название книги</td><td>Количество копий</td>
+        </tr>
+
+        {{#each book}}
+        <tr>
+            <td>
+                {{this.NameOfAuthor}}
+            </td>
+            <td>
+                {{this.NameOfBook}}
+            </td>
+            <td>
+                {{this.NumberOfCopies}}
+            </td>
+            <td>
+                <a href="">Взять почитать</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <ul id = "pagination">
+    </ul>
+
+    <script>
+        let pagination = document.querySelector('#pagination');
+        let items = []
+
+        for (let i = 1; i<={{Count}}; i++)
+        {
+            let li = document.createElement('li');
+            pagination.appendChild(li);
+            li.innerHTML = '<div class = "paginate"></li><a href="/BookList/'+i+'/{{nums}}">'+i+'</a></li></div>';
+            items.push(li);
+        }
+    </script>
+<a id="a" href="/">На главную страницу</a>
+</form>
+</body>
+</html>

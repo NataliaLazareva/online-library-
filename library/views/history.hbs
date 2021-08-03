@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/booktable.css">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table id="table">
+        <tr>
+            <td>Книга</td><td>Дата выдачи</td><td>Дата возврата</td>
+        </tr>
+
+        {{#each data}}
+            <tr>
+                <td>
+                    {{this.Name}}
+                </td>
+                <td>
+                    {{this.DateOfIssue}}
+                </td>
+                <td>
+                    {{this.ExpectedReturnDate}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a id="a" href="/">На главную страницу</a>
+</form>
+</body>
+</html>

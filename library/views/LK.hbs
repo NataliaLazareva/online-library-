@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/paint.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/lk.css">
+    <title>Личный кабинет</title>
+</head>
+
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<nav>
+    <a href="/main_paint" title="На главную страницу" id="logo">OfflineLib</a>
+    <input type="text" class="field" placeholder="Поиск по каталогу"/>
+    <span id="schedule">Телефон:+7 (499) 550-04-70</span>
+    <div class="dropdown">
+       <!--<span id="clientName"><a href="">{{data.Name}}</a></span>-->
+        <button onclick="myFunction()" class="dropbtn">{{data.Name}}</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">Адрес: {{data.Address}}</a>
+            <a href="#">Номер читательского билета: {{data.LibraryСardNumber}}</a>
+            <a href="/history/{{data.LibraryСardNumber}}">История</a>
+            <a href="#">Телефон: {{data.PhoneNumber}}</a>
+            <a href="/BookList/1/{{data.LibraryСardNumber}}">Взять книгу</a>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+<br id="main" name="main">
+
+{{>secondMenu}}
+
+{{>body}}
+
+<footer>
+</footer>
+</body>
+</form>
+</html>
