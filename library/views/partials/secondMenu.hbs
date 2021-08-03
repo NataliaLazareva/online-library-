@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/paint.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/windows.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/lk.css">
+</head>
+
+
+
+<body>
+
+<script>
+    function myFunc() {
+        document.getElementById("notmyDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    function my() {
+        document.getElementById("nottmyDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+</script>
+
+<nav id="menu" class="parent">
+
+    <div class="dropdown">
+        <button onclick="myFunc()" class="dropbtn">О БИБЛИОТЕКЕ</button>
+        <div id="notmyDropdown" class="dropdown-content">
+            <a href="/libHistory">История</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button onclick="my()" class="dropbtn">ЧИТАТЕЛЯМ</button>
+        <div id="nottmyDropdown" class="dropdown-content">
+            <a href="/readingRooms">Читальные залы</a>
+            <a href="/Uslugi">Услуги</a>
+        </div>
+    </div>
+
+
+    <div class="dropdown">
+        <button onclick="myFunc()" class="dropbtn"><a href="/BookList/1/0">СПИСОК КНИГ</a></button>
+    </div>
+
+    <!-- <div class="child">
+         <span id="about_lib" class="mainmenubtn"><a href="">О БИБЛИОТЕКЕ</a></span>
+         <div class="btn">
+             <a href="">История</a>
+             <a href="">Контакты</a>
+         </div>
+     </div>
+     <div class="child">
+            <span id="for_guests" class="mainmenubtn"><a href="">ЧИТАТЕЛЯМ</a></span>
+            <div class="btn">
+             <a href="">Читальные залы</a>
+             <a href="">Услуги</a>
+            </div>
+     </div>
+     <div class="child">
+         <span id="publications"><a href="/BookList/1/0">СПИСОК КНИГ</a></span>
+     </div>-->
+</nav>
+</body>
+</html>
